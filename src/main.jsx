@@ -14,7 +14,18 @@ import './assets/css/index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // Routes
-import { Home, Welcome, Store, StoreProducts, StoreProfile } from './routes';
+import {
+  Home,
+  Welcome,
+  StoreLayout,
+  StoreProducts,
+  StoreProfile,
+  Dashboard,
+  Orders,
+} from './routes';
+
+// Layouts
+import AppLayout from './layouts/app-layout/AppLayout';
 
 const root = createRoot(document.getElementById('root'));
 root.render(
@@ -25,10 +36,14 @@ root.render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="welcome" element={<Welcome />} />
-          <Route path="store" element={<Store />}>
-            <Route index element={<StoreProducts />} />
-          </Route>
           <Route path="register-store" element={<StoreProfile />} />
+          <Route element={<AppLayout />}>
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="orders" element={<Orders />} />
+            <Route element={<StoreLayout />}>
+              <Route path="store" element={<StoreProducts />} />
+            </Route>
+          </Route>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

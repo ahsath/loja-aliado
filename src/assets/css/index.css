@@ -1,0 +1,9 @@
+@tailwind utilities;
+
+svg {
+  display: block;
+}
+
+.MuiOutlinedInput-root {
+  border-radius: 8px !important;
+}

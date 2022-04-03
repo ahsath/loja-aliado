@@ -1,0 +1,38 @@
+[
+  {
+    "picture": "https://i.pravatar.cc/100?img=1",
+    "total": "25,00 EUR",
+    "distance": "3.4 km",
+    "date": "Agora"
+  },
+  {
+    "picture": "https://i.pravatar.cc/100?img=20",
+    "total": "15,43 EUR",
+    "distance": "2.3 km",
+    "date": "Ha 2 min"
+  },
+  {
+    "picture": "https://i.pravatar.cc/100?img=3",
+    "total": "35,67 EUR",
+    "distance": "4.2 km",
+    "date": "Ha 4 min"
+  },
+  {
+    "picture": "https://i.pravatar.cc/100?img=4",
+    "total": "83,22 EUR",
+    "distance": "1.2 km",
+    "date": "Ha 8 min"
+  },
+  {
+    "picture": "https://i.pravatar.cc/100?img=5",
+    "total": "7,12 EUR",
+    "distance": "5.5 km",
+    "date": "Ha 10 min"
+  },
+  {
+    "picture": "https://i.pravatar.cc/100?img=6",
+    "total": "21,94 EUR",
+    "distance": "1.5 km",
+    "date": "Ha 1 hora"
+  }
+]

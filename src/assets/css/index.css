@@ -7,3 +7,7 @@ svg {
 .MuiOutlinedInput-root {
   border-radius: 8px !important;
 }
+
+.BoardOrdersBook::-webkit-scrollbar {
+  display: none;
+}

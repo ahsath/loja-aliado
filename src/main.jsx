@@ -17,7 +17,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {
   Home,
   Welcome,
-  StoreLayout,
   StoreProducts,
   StoreProfile,
   Dashboard,
@@ -40,9 +39,7 @@ root.render(
           <Route element={<AppLayout />}>
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="orders" element={<Orders />} />
-            <Route element={<StoreLayout />}>
-              <Route path="store" element={<StoreProducts />} />
-            </Route>
+            <Route path="store" element={<StoreProducts />} />
           </Route>
         </Routes>
       </BrowserRouter>

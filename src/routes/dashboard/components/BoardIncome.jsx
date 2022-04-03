@@ -2,7 +2,7 @@ import { Typography } from '@mui/material';
 
 export default function BoardIncome() {
   return (
-    <div className="bg-white p-4  rounded-2xl">
+    <div className="bg-white p-4 rounded-2xl">
       <div className="flex justify-between">
         <Typography variant="caption" component="div" color="text.secondary">
           Hoje

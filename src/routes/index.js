@@ -9,6 +9,5 @@ export { default as Dashboard } from './dashboard/Dashboard';
 export { default as Orders } from './orders/Orders';
 
 // Store views & layouts
-export { default as StoreLayout } from './store/layouts/StoreLayout';
 export { default as StoreProducts } from './store/StoreProducts';
 export { default as StoreProfile } from './store/settings/profile/StoreProfile';

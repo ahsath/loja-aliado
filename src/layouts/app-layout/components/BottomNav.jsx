@@ -27,7 +27,7 @@ export default function BottomNav() {
         left: 0,
         right: 0,
         borderTop: 'solid',
-        borderColor: 'divider',
+        borderColor: 'grey.50',
       }}
       onChange={(_, path) => setCurrentPath(path)}
       showLabels

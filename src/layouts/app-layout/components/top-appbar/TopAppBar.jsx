@@ -1,5 +1,6 @@
 import { AppBar, Box, Toolbar, IconButton, Avatar } from '@mui/material';
-import avatar from '../../../assets/img/avatar.jpg';
+import avatar from '../../../../assets/img/avatar.jpg';
+import OpenCloseToggleButton from './OpenCloseStoreToggleButton';
 
 export default function TopAppBar() {
   return (
@@ -9,7 +10,7 @@ export default function TopAppBar() {
       sx={{
         backgroundColor: 'background.paper',
         borderBottom: 'solid',
-        borderColor: 'divider',
+        borderColor: 'grey.50',
       }}
     >
       <Toolbar className="justify-between">
@@ -20,9 +21,12 @@ export default function TopAppBar() {
           <div className="font-['Pacifico',_cursive] text-3xl">Loja</div>
           <div className="font-black text-xs">Aliado</div>
         </Box>
-        <IconButton sx={{ mr: -1 }}>
-          <Avatar src={avatar} sx={{ width: 32, height: 32 }} />
-        </IconButton>
+        <div>
+          <OpenCloseToggleButton />
+          <IconButton sx={{ mr: -1 }}>
+            <Avatar src={avatar} sx={{ width: 32, height: 32 }} />
+          </IconButton>
+        </div>
       </Toolbar>
     </AppBar>
   );

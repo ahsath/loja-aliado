@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
+import TopAppBar from './components/top-appbar/TopAppBar';
 import BottomNav from './components/BottomNav';
-import TopAppBar from './components/TopAppBar';
 
 export default function AppLayout() {
   return (

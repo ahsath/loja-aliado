@@ -6,7 +6,6 @@ export default createTheme({
       main: '#FF0000',
       light: '#FEF2F2',
     },
-    divider: '#FAFAFA',
   },
   components: {
     MuiButton: {

@@ -5,3 +5,5 @@ export { default as MapboxPin } from './mapbox/MapboxPin';
 
 export { default as Scroll } from './scroll/Scroll';
 export { default as ScrollItem } from './scroll/ScrollItem';
+
+export { default as Main } from './Main';

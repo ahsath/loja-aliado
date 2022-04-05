@@ -27,6 +27,7 @@ import {
 
 // Layouts
 import AppLayout from './layouts/app-layout/AppLayout';
+import OrdersLayout from './routes/orders/layouts/OrdersLayout';
 
 const root = createRoot(document.getElementById('root'));
 root.render(
@@ -40,9 +41,10 @@ root.render(
           <Route path="register-store" element={<StoreProfile />} />
           <Route element={<AppLayout />}>
             <Route path="dashboard" element={<Dashboard />} />
-            <Route path="orders" element={<Orders />} />
+            <Route path="orders" element={<OrdersLayout />}>
               <Route path="ongoing" element={<OrdersOngoing />} />
               <Route path="previous" element={<OrdersPrevious />} />
+            </Route>
             <Route path="store" element={<StoreProducts />} />
           </Route>
         </Routes>

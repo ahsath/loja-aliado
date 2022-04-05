@@ -21,6 +21,8 @@ import {
   StoreProfile,
   Dashboard,
   Orders,
+  OrdersOngoing,
+  OrdersPrevious,
 } from './routes';
 
 // Layouts
@@ -39,6 +41,8 @@ root.render(
           <Route element={<AppLayout />}>
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="orders" element={<Orders />} />
+              <Route path="ongoing" element={<OrdersOngoing />} />
+              <Route path="previous" element={<OrdersPrevious />} />
             <Route path="store" element={<StoreProducts />} />
           </Route>
         </Routes>

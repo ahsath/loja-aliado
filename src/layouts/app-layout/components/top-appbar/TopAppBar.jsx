@@ -1,15 +1,24 @@
-import { AppBar, Box, Toolbar, IconButton, Avatar } from '@mui/material';
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Avatar,
+  useScrollTrigger,
+} from '@mui/material';
 import avatar from '../../../../assets/img/avatar.jpg';
 import ToggleStoreButton from './ToggleStoreButton';
 
 export default function TopAppBar() {
+  const trigger = useScrollTrigger();
+
   return (
     <AppBar
       position="fixed"
       elevation={0}
       sx={{
         backgroundColor: 'background.paper',
-        borderBottom: 'solid',
+        borderBottom: trigger && 'solid',
         borderColor: 'grey.50',
       }}
     >

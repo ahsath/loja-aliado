@@ -8,6 +8,6 @@ svg {
   border-radius: 8px !important;
 }
 
-.BoardOrdersBook::-webkit-scrollbar {
+*::-webkit-scrollbar {
   display: none;
 }

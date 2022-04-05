@@ -28,30 +28,30 @@ export default function BoardLeanr() {
             className="w-[calc(100vw_-_2rem)] aspect-video block rounded-2xl"
             src="https://www.youtube.com/embed/cjIswDCKgu0"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+            allowFullScreen
+          />
         </ScrollItem>
         <ScrollItem>
           <iframe
             className="w-[calc(100vw_-_2rem)] aspect-video block rounded-2xl"
             src="https://www.youtube.com/embed/QlqqAm9sTJg"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+            allowFullScreen
+          />
         </ScrollItem>
         <ScrollItem>
           <iframe
             className="w-[calc(100vw_-_2rem)] aspect-video block rounded-2xl"
             src="https://www.youtube.com/embed/SccSCuHhOw0"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+            allowFullScreen
+          />
         </ScrollItem>
       </Scroll>
     </Box>

@@ -1,24 +1,25 @@
-import { Typography, Avatar } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { Typography, Avatar, ListItemButton, Box } from '@mui/material';
+import { Scroll, ScrollItem } from '../../../components';
 
 export default function BoardOrdersBook({ title, orders, ring }) {
-  const { palette } = useTheme();
-
   return (
-    <div className="flex flex-col gap-2 bg-white rounded-2xl py-4">
-      <div className="px-4">
-        <div className="flex items-center h-8">
-          <Typography variant="caption" color="text.secondary">
-            {title}
-          </Typography>
-        </div>
-      </div>
-      <div className="BoardOrdersBook flex gap-3 overflow-x-scroll snap-mandatory snap-x scroll-pl-4 w-screen [scrollbar-width:none] px-4">
+    <Box
+      className="flex flex-col gap-2 rounded-2xl pt-2 pb-4 overflow-hidden"
+      sx={{
+        bgcolor: (theme) => theme.palette.background.paper,
+      }}
+    >
+      <ListItemButton sx={{ height: 40 }}>
+        <Typography variant="caption" color="text.secondary">
+          {title}
+        </Typography>
+      </ListItemButton>
+      <Scroll>
         {orders.map((order) => {
           return (
-            <div
+            <ScrollItem
               key={order.picture}
-              className="flex items-center flex-col w-max snap-start"
+              className="flex items-center flex-col"
             >
               <Avatar
                 src={order.picture}
@@ -26,7 +27,7 @@ export default function BoardOrdersBook({ title, orders, ring }) {
                   width: 60,
                   height: 60,
                   outlineStyle: ring && 'solid',
-                  outlineColor: palette.primary.main,
+                  outlineColor: (theme) => theme.palette.primary.main,
                   outlineWidth: 2,
                   outlineOffset: 3,
                   margin: 1,
@@ -48,10 +49,10 @@ export default function BoardOrdersBook({ title, orders, ring }) {
                   {order.distance} • {order.date}
                 </Typography>
               </div>
-            </div>
+            </ScrollItem>
           );
         })}
-      </div>
-    </div>
+      </Scroll>
+    </Box>
   );
 }

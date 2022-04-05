@@ -2,7 +2,7 @@ import { ToggleButton } from '@mui/material';
 import StoreRounded from '@mui/icons-material/StoreRounded';
 import { useState } from 'react';
 
-export default function OpenCloseToggleButton() {
+export default function ToggleStoreButton() {
   const [storeOpen, setStoreOpen] = useState(false);
 
   return (

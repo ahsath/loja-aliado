@@ -3,7 +3,7 @@ import avatar from '../assets/img/avatar.jpg';
 
 export default function Welcome() {
   return (
-    <div className="flex flex-col justify-between h-full p-4">
+    <div className="flex flex-col justify-between h-screen p-4">
       <div className="mt-10">
         <Avatar src={avatar} sx={{ width: 100, height: 100, mx: 'auto' }} />
         <h1 className="mt-4 m-0 text-center">Olá, Aninha!</h1>

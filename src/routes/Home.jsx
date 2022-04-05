@@ -2,7 +2,7 @@ import { Button, Box } from '@mui/material';
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-between h-full p-4">
+    <div className="flex flex-col justify-between h-screen p-4">
       <div />
       <Box
         className="flex gap-4 items-baseline self-center"

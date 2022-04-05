@@ -17,7 +17,7 @@ export default function StoreSettingsProfile() {
   };
 
   return (
-    <div className="flex flex-col h-full p-4">
+    <div className="flex flex-col h-screen p-4">
       <div className="flex gap-6 flex-col pb-6">
         <Badge
           className="self-center"

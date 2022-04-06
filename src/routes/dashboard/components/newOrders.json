@@ -1,38 +1,74 @@
 [
   {
     "picture": "https://i.pravatar.cc/100?img=1",
+    "name": "Amanda Cerni",
     "total": "25,00 EUR",
     "distance": "3.4 km",
-    "date": "Agora"
+    "date": "Agora",
+    "address": "R. da Capela 10 Loja 2, 2705-599 São João das Lampas"
   },
   {
     "picture": "https://i.pravatar.cc/100?img=20",
+    "name": "Gerald Butler",
     "total": "15,43 EUR",
     "distance": "2.3 km",
-    "date": "Ha 2 min"
+    "date": "Ha 2 min",
+    "address": "R. do Caminho dos Moleiros, São João das Lampas"
   },
   {
     "picture": "https://i.pravatar.cc/100?img=3",
+    "name": "Will Smith",
     "total": "35,67 EUR",
     "distance": "4.2 km",
-    "date": "Ha 4 min"
+    "date": "Ha 4 min",
+    "address": "R. do Camejo 39, 2710-289 Sintra"
   },
   {
     "picture": "https://i.pravatar.cc/100?img=4",
+    "name": "Elon Musk",
     "total": "83,22 EUR",
     "distance": "1.2 km",
-    "date": "Ha 8 min"
+    "date": "Ha 8 min",
+    "address": "R. das Hortas 25, 2705-645 Gouveia"
   },
   {
     "picture": "https://i.pravatar.cc/100?img=5",
+    "name": "Richard Holmes",
     "total": "7,12 EUR",
     "distance": "5.5 km",
-    "date": "Ha 10 min"
+    "date": "Ha 10 min",
+    "address": "Av. Luís Augusto Colares 83, 2705-109 Colares"
   },
   {
     "picture": "https://i.pravatar.cc/100?img=6",
+    "name": "Martin Morty",
     "total": "21,94 EUR",
     "distance": "1.5 km",
-    "date": "Ha 1 hora"
+    "date": "Ha 1 hora",
+    "address": "Escadinhas J. Ramos Baeta 14, 2705-101 Lisboa"
+  },
+  {
+    "picture": "https://i.pravatar.cc/100?img=7",
+    "name": "Barry Bee",
+    "total": "3,45 EUR",
+    "distance": "1.1 km",
+    "date": "Ha 2 hora",
+    "address": "Av. Alfredo Coelho 28, 2705-329 Colares"
+  },
+  {
+    "picture": "https://i.pravatar.cc/100?img=8",
+    "name": "Achiles",
+    "total": "21,76 EUR",
+    "distance": "4.3 km",
+    "date": "Ha 3 hora",
+    "address": "Estrada da Cumeira, Venda Nova, 2460-699 São Martinho do Porto"
+  },
+  {
+    "picture": "https://i.pravatar.cc/100?img=9",
+    "name": "Jennifer Lawrence",
+    "total": "8,36 EUR",
+    "distance": "3.3 km",
+    "date": "Ha 4 hora",
+    "address": "Quinta Do Castelo, S/N, Leiria"
   }
 ]

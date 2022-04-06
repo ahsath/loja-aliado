@@ -1,6 +1,5 @@
 import { Tabs, Tab, Slide, useScrollTrigger } from '@mui/material';
-import { useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 export default function OrdersNavTab() {
   const trigger = useScrollTrigger();
@@ -12,6 +11,7 @@ export default function OrdersNavTab() {
         sx={{
           bgcolor: (theme) => theme.palette.background.paper,
           position: 'sticky',
+          zIndex: 'speedDial',
           top: { xs: 56, sm: 64 },
         }}
         variant="fullWidth"

@@ -1,13 +1,18 @@
 @tailwind utilities;
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  border-width: 0;
+  border-style: solid;
+}
+
 svg {
   display: block;
 }
 
 .MuiOutlinedInput-root {
   border-radius: 8px !important;
-}
-
-*::-webkit-scrollbar {
-  display: none;
 }

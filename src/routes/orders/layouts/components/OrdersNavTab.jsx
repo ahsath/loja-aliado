@@ -5,7 +5,7 @@ export default function OrdersNavTab() {
   const trigger = useScrollTrigger();
 
   return (
-    <Slide appear={false} direction="down" in={!trigger}>
+    <Slide direction="down" in={!trigger}>
       <Tabs
         value={useLocation().pathname}
         sx={{

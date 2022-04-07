@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "a",
+    "picture": "https://i.pravatar.cc/100?img=21",
+    "name": "Demi Lovato",
+    "total": "21,33 EUR",
+    "distance": "1.4 km",
+    "date": "Ha 3 min",
+    "address": "R. da Capela 10 Loja 2, 2705-599 São João das Lampas"
+  },
+  {
+    "_id": "b",
+    "picture": "https://i.pravatar.cc/100?img=22",
+    "name": "Nash Ville",
+    "total": "33,20 EUR",
+    "distance": "4.3 km",
+    "date": "Ha 10 min",
+    "address": "R. do Caminho dos Moleiros, São João das Lampas"
+  }
+]

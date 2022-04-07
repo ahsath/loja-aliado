@@ -1,3 +1,6 @@
+import prevOrders from '../../data/prevOrders.json';
+import OrdersBookList from './components/OrdersBookList';
+
 export default function OrdersPrevious() {
-  return <div>previous orders</div>;
+  return <OrdersBookList orders={prevOrders} resolvePath="/orders/" />;
 }

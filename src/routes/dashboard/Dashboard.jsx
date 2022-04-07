@@ -2,8 +2,8 @@ import BoardIncome from './components/BoardIncome';
 import BoardOrdersBook from './components/BoardOrdersBook';
 import BoardLearn from './components/BoardLearn';
 
-import newOrders from './components/newOrders.json';
-import prevOrders from './components/prevOrders.json';
+import newOrders from '../../data/newOrders.json';
+import prevOrders from '../../data/prevOrders.json';
 import { Main } from '../../components';
 
 export default function Dashboard() {

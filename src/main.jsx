@@ -20,7 +20,7 @@ import {
   StoreProducts,
   StoreProfile,
   Dashboard,
-  Orders,
+  OrdersNew,
   OrdersOngoing,
   OrdersPrevious,
 } from './routes';
@@ -42,7 +42,7 @@ root.render(
           <Route element={<AppLayout />}>
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="orders" element={<OrdersLayout />}>
-              <Route index element={<Orders />} />
+              <Route index element={<OrdersNew />} />
               <Route path="ongoing" element={<OrdersOngoing />} />
               <Route path="previous" element={<OrdersPrevious />} />
             </Route>

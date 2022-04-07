@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "a",
+    "name": "Granola Fitness Cranberries & Seeds",
+    "stock": 100,
+    "price": "0,77 EUR",
+    "src": "https://res.cloudinary.com/abillionveg/image/upload/f_auto,q_auto,a_exif,w_1080,h_1080,c_fill/v1606562156/rylyfxmks8ep5avp6rkn.jpg"
+  },
+  {
+    "_id": "b",
+    "name": "Leite Magro Mimosa 1L",
+    "stock": 0,
+    "price": "0,75 EUR",
+    "src": "https://www.auchan.pt/dw/image/v2/BFRC_PRD/on/demandware.static/-/Sites-auchan-pt-master-catalog/default/dwfc9e1723/images/hi-res/000011862.jpg"
+  },
+  {
+    "_id": "c",
+    "name": "Cereais Amanhecer Linha com Chocolate 300 G",
+    "stock": 300,
+    "price": "2,00 EUR",
+    "src": "https://media.recheio.pt/catalogo/media/catalog/product/cache/1/image/900x900/9df78eab33525d08d6e5fb8d27136e95/8/3/835368_14.jpg"
+  },
+  {
+    "_id": "d",
+    "name": "Couve flor",
+    "stock": 8,
+    "price": "0,70 EUR",
+    "src": "https://mysweetgreen.pt/wp-content/uploads/2020/06/Couve-Flor.jpg"
+  },
+  {
+    "_id": "e",
+    "name": "Molho de Alho",
+    "stock": 300,
+    "price": "0,50 EUR",
+    "src": "https://cdn360hyper.azureedge.net/images/thumbs/6897090_molho-alho-top-down-220ml-heinz_550.jpeg"
+  },
+  {
+    "_id": "f",
+    "name": "Pão de Noz",
+    "stock": 10,
+    "price": "0,35 EUR",
+    "src": "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/vimdb/80966.jpg"
+  }
+]

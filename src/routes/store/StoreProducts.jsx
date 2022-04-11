@@ -67,6 +67,8 @@ export default function StoreProducts() {
           }}
           color="primary"
           aria-label="Adicionar um novo produto"
+          component={Link}
+          to="/store/add"
         >
           <AddRounded />
         </Fab>

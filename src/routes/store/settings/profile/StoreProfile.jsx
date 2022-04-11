@@ -1,10 +1,10 @@
 import { Badge, Avatar, Box, TextField, Button } from '@mui/material';
-import StoreUploadLogoButton from './StoreUploadLogoButton';
 import {
   MapboxProvider,
   MapboxMap,
   MapboxMarker,
   MapboxPin,
+  UploadFileButton,
 } from '../../../../components';
 import { useState } from 'react';
 
@@ -22,7 +22,9 @@ export default function StoreSettingsProfile() {
         <Badge
           className="self-center"
           overlap="circular"
-          badgeContent={<StoreUploadLogoButton />}
+          badgeContent={
+            <UploadFileButton ariaLabel="Toque para selecionar um logotipo para sua loja" />
+          }
           anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
         >
           <Avatar

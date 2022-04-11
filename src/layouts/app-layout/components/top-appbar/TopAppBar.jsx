@@ -16,8 +16,8 @@ export default function TopAppBar() {
     <AppBar
       position="fixed"
       elevation={0}
+      color="inherit"
       sx={{
-        backgroundColor: 'background.paper',
         borderBottom: trigger && 'solid',
         borderColor: 'grey.50',
       }}
@@ -32,7 +32,7 @@ export default function TopAppBar() {
         </Box>
         <div>
           <ToggleStoreButton />
-          <IconButton sx={{ mr: -1 }}>
+          <IconButton edge="end">
             <Avatar src={avatar} sx={{ width: 32, height: 32 }} />
           </IconButton>
         </div>

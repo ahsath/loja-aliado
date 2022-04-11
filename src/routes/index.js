@@ -14,3 +14,4 @@ export { default as OrdersPrevious } from './orders/OrdersPrevious';
 export { default as StoreProducts } from './store/StoreProducts';
 export { default as StoreProfile } from './store/settings/profile/StoreProfile';
 export { default as StoreAddProduct } from './store/StoreAddProduct';
+export { default as StoreEditProduct } from './store/StoreEditProduct';

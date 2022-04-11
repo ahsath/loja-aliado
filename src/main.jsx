@@ -24,6 +24,7 @@ import {
   OrdersOngoing,
   OrdersPrevious,
   StoreAddProduct,
+  StoreEditProduct,
 } from './routes';
 
 // Layouts
@@ -50,6 +51,7 @@ root.render(
             <Route path="store" element={<StoreProducts />} />
           </Route>
           <Route path="store/add" element={<StoreAddProduct />} />
+          <Route path="store/:productId" element={<StoreEditProduct />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

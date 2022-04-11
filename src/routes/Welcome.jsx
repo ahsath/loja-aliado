@@ -17,12 +17,7 @@ export default function Welcome() {
         </Typography>
       </div>
 
-      <Button
-        className="w-full"
-        variant="contained"
-        size="large"
-        disableElevation
-      >
+      <Button variant="contained" size="large" fullWidth disableElevation>
         Cadastre sua loja
       </Button>
     </div>

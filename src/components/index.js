@@ -9,3 +9,5 @@ export { default as ScrollItem } from './scroll/ScrollItem';
 export { default as Main } from './Main';
 
 export { default as UploadFileButton } from './UploadFileButton';
+
+export { default as Page } from './Page';

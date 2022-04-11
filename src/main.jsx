@@ -23,6 +23,7 @@ import {
   OrdersNew,
   OrdersOngoing,
   OrdersPrevious,
+  StoreAddProduct,
 } from './routes';
 
 // Layouts
@@ -48,6 +49,7 @@ root.render(
             </Route>
             <Route path="store" element={<StoreProducts />} />
           </Route>
+          <Route path="store/add" element={<StoreAddProduct />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

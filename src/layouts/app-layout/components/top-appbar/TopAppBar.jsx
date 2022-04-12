@@ -1,3 +1,4 @@
+import { useAuth0 } from '@auth0/auth0-react';
 import {
   AppBar,
   Box,
@@ -6,11 +7,11 @@ import {
   Avatar,
   useScrollTrigger,
 } from '@mui/material';
-import avatar from '../../../../assets/img/avatar.jpg';
 import ToggleStoreButton from './ToggleStoreButton';
 
 export default function TopAppBar() {
   const trigger = useScrollTrigger();
+  const { user } = useAuth0();
 
   return (
     <AppBar
@@ -33,7 +34,7 @@ export default function TopAppBar() {
         <div>
           <ToggleStoreButton />
           <IconButton edge="end">
-            <Avatar src={avatar} sx={{ width: 32, height: 32 }} />
+            <Avatar src={user?.picture} sx={{ width: 32, height: 32 }} />
           </IconButton>
         </div>
       </Toolbar>

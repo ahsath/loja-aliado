@@ -31,6 +31,7 @@ import {
 import AppLayout from './layouts/app-layout/AppLayout';
 import OrdersLayout from './routes/orders/layouts/OrdersLayout';
 
+import AuthGuard from './AuthGuard';
 const root = createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -39,6 +40,7 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+            <Route element={<AuthGuard />}>
           <Route path="welcome" element={<Welcome />} />
           <Route path="register-store" element={<StoreProfile />} />
           <Route element={<AppLayout />}>
@@ -52,6 +54,7 @@ root.render(
           </Route>
           <Route path="store/add" element={<StoreAddProduct />} />
           <Route path="store/:productId" element={<StoreEditProduct />} />
+            </Route>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

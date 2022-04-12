@@ -2,7 +2,9 @@ import IconButton from '@mui/material/IconButton';
 import AddAPhotoRounded from '@mui/icons-material/AddAPhotoRounded';
 
 export default function UploadFileButton({ ariaLabel, ...props }) {
-  const id = crypto.randomUUID();
+  // const id = crypto.randomUUID()
+  const id = Math.random().toString();
+
   return (
     <label {...props} htmlFor={id}>
       <input id={id} className="sr-only" accept="image/*" type="file" />

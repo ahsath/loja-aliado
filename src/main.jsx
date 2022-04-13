@@ -41,7 +41,7 @@ root.render(
     <CssBaseline />
     <ThemeProvider theme={theme}>
       <Auth0Provider
-        domain="loja.eu.auth0.com"
+        domain={import.meta.env.VITE_AUTH0_DOMAIN}
         clientId="vCZWpY1mGjPJmdEBlQrWMGiOyWRNeqs2"
         redirectUri={window.location.origin + '/welcome'}
       >

@@ -39,13 +39,13 @@ const root = createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <CssBaseline />
-    <ThemeProvider theme={theme}>
-      <Auth0Provider
-        domain={import.meta.env.VITE_AUTH0_DOMAIN}
-        clientId="vCZWpY1mGjPJmdEBlQrWMGiOyWRNeqs2"
-        redirectUri={window.location.origin + '/welcome'}
-      >
-        <BrowserRouter>
+    <Auth0Provider
+      domain={import.meta.env.VITE_DOMAIN}
+      clientId={import.meta.env.VITE_CLIENT_ID}
+      redirectUri={window.location.origin}
+    >
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route element={<AuthGuard />}>
@@ -64,8 +64,8 @@ root.render(
               <Route path="store/:productId" element={<StoreEditProduct />} />
             </Route>
           </Routes>
-        </BrowserRouter>
-      </Auth0Provider>
-    </ThemeProvider>
+        </ThemeProvider>
+      </BrowserRouter>
+    </Auth0Provider>
   </React.StrictMode>
 );

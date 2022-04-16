@@ -46,7 +46,7 @@ export default function StoreSettingsProfile() {
       </div>
 
       <div className="grid flex-grow">
-        <MapboxProvider accessToken="pk.eyJ1IjoiYWhzYXRoIiwiYSI6ImNsMWRpZWI0ZDBoc2Yzam8wdnA5Z2R0Y2gifQ.QYDyBYHRG0HXue4qE0qoVw">
+        <MapboxProvider accessToken={import.meta.env.VITE_ACCESS_TOKEN}>
           <MapboxMap
             className="-mx-4 -mb-4 col-span-full row-span-full"
             onMove={onMove}

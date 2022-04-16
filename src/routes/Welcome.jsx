@@ -1,24 +1,9 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import { Button, Typography, Avatar } from '@mui/material';
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Welcome() {
-  const { user, getIdTokenClaims } = useAuth0();
-
-  useEffect(() => {
-    async function t() {
-      const { __raw: idToken } = await getIdTokenClaims();
-      const app = new window.Realm.App({ id: 'loja-eucji' });
-      const credentials = window.Realm.Credentials.jwt(idToken);
-      const user = await app.logIn(credentials);
-      const mongo = user.mongoClient('mongodb-atlas');
-      const stores = mongo.db('loja').collection('stores');
-      const store = await stores.find({});
-      console.log(store);
-    }
-    t();
-  }, []);
+  const { user } = useAuth0();
 
   return (
     <div className="flex flex-col justify-between h-screen p-4">
@@ -26,6 +11,7 @@ export default function Welcome() {
         <Avatar
           src={user?.picture}
           sx={{ width: 100, height: 100, mx: 'auto' }}
+          alt={user?.name}
         />
         <h1 className="mt-4 m-0 text-center">Olá, {user?.name}!</h1>
         <Typography mt={6}>

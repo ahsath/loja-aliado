@@ -1,15 +1,30 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import { Button, Box } from '@mui/material';
-import { Navigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import useRealm from '../../hooks/useRealm';
 
 export default function Home() {
-  const { user, isLoading, loginWithRedirect } = useAuth0();
+  const { user, loginWithRedirect, logout, isLoading, getIdTokenClaims } =
+    useAuth0();
+  const { db, loginWithCustomJwt } = useRealm();
+  const [busy, setBusy] = useState(false);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (user) return <Navigate to={'/welcome'} replace />;
+  useEffect(() => {
+    if (user) {
+      setBusy(true);
+      getIdTokenClaims().then(async (token) => {
+        await loginWithCustomJwt(token.__raw);
+        const stores = db('loja').collection('stores');
+        const store = await stores.findOne();
+        console.log(store);
+        setBusy(false);
+      });
+    }
+  }, [user]);
 
   return (
     <div className="flex flex-col justify-between h-screen p-4">
+      {(isLoading || busy) && <div className="absolute">Loading...</div>}
       <div />
       <Box
         className="flex gap-4 items-baseline self-center"

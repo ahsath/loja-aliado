@@ -1,24 +1,30 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import { Button, Box } from '@mui/material';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import useRealm from '../../hooks/useRealm';
 
 export default function Home() {
-  const { user, loginWithRedirect, logout, isLoading, getIdTokenClaims } =
-    useAuth0();
+  const { user, loginWithRedirect, isLoading, getIdTokenClaims } = useAuth0();
   const { db, loginWithCustomJwt } = useRealm();
   const [busy, setBusy] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (user) {
       setBusy(true);
-      getIdTokenClaims().then(async (token) => {
-        await loginWithCustomJwt(token.__raw);
-        const stores = db('loja').collection('stores');
-        const store = await stores.findOne();
-        console.log(store);
-        setBusy(false);
-      });
+      getIdTokenClaims()
+        .then(async (token) => {
+          await loginWithCustomJwt(token.__raw);
+          const stores = db('loja').collection('stores');
+          const store = await stores.findOne();
+          if (!store) {
+            navigate('/register-store', { replace: true });
+          } else {
+            navigate('/dashboard', { replace: true });
+          }
+        })
+        .finally(() => setBusy(false));
     }
   }, [user]);
 

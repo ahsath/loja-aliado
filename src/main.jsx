@@ -35,6 +35,9 @@ import OrdersLayout from './routes/orders/layouts/OrdersLayout';
 import { Auth0Provider } from '@auth0/auth0-react';
 import AuthGuard from './AuthGuard';
 
+// Mapbox
+import { MapboxProvider } from './components';
+
 const root = createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -61,6 +64,16 @@ root.render(
               </Route>
               <Route path="store/add" element={<StoreAddProduct />} />
               <Route path="store/:productId" element={<StoreEditProduct />} />
+              <Route
+                path="store/settings/profile"
+                element={
+                  <MapboxProvider
+                    accessToken={import.meta.env.VITE_ACCESS_TOKEN}
+                  >
+                    <StoreProfile />
+                  </MapboxProvider>
+                }
+              />
             </Route>
           </Routes>
         </ThemeProvider>

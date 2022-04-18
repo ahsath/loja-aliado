@@ -7,6 +7,7 @@ export default function Page({
   backIcon = <CloseRounded />,
   children,
   bottomContent,
+  spaceless = false,
 }) {
   const navigate = useNavigate();
   return (
@@ -30,9 +31,9 @@ export default function Page({
           </Typography>
         </Toolbar>
       </AppBar>
-      <Toolbar />
+      {!spaceless && <Toolbar />}
       {children}
-      <Toolbar />
+      {!spaceless && <Toolbar />}
       <Box
         position="fixed"
         left={0}

@@ -19,7 +19,7 @@ export default function Home() {
           const stores = db('loja').collection('stores');
           const store = await stores.findOne();
           if (!store) {
-            navigate('/register-store', { replace: true });
+            navigate('/store/settings/profile', { replace: true });
           } else {
             navigate('/dashboard', { replace: true });
           }

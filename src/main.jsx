@@ -50,7 +50,6 @@ root.render(
             <Route path="/" element={<Home />} />
             <Route element={<AuthGuard />}>
               <Route path="welcome" element={<Welcome />} />
-              <Route path="register-store" element={<StoreProfile />} />
               <Route element={<AppLayout />}>
                 <Route path="dashboard" element={<Dashboard />} />
                 <Route path="orders" element={<OrdersLayout />}>

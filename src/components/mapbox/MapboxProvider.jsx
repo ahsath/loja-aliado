@@ -1,8 +1,7 @@
 import { createContext, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-
-export const MapboxMapContext = createContext();
+import { MapboxMapContext } from './context';
 
 export default function MapboxProvider({ accessToken, children }) {
   mapboxgl.accessToken = accessToken;

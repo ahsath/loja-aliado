@@ -2,7 +2,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { Button, Box } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import useRealm from '../../hooks/useRealm';
+import useRealm from '../hooks/useRealm';
 
 export default function Home() {
   const { user, loginWithRedirect, isLoading, getIdTokenClaims } = useAuth0();

@@ -7,14 +7,16 @@ export default function MapboxProvider({ accessToken, children }) {
   mapboxgl.accessToken = accessToken;
 
   const [mapbox] = useState({
-    map(container) {
+    map({ container, center }) {
       return new mapboxgl.Map({
         container,
         style: 'mapbox://styles/mapbox/streets-v11',
+        center,
+        zoom: 15,
       });
     },
-    marker(element) {
-      return new mapboxgl.Marker({ element });
+    marker(options) {
+      return new mapboxgl.Marker(options);
     },
     geolocateControl() {
       return new mapboxgl.GeolocateControl({

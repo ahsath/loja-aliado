@@ -7,11 +7,18 @@ import {
   Avatar,
   useScrollTrigger,
 } from '@mui/material';
+import useRealm from '../../../../hooks/useRealm';
 import ToggleStoreButton from './ToggleStoreButton';
 
 export default function TopAppBar() {
   const trigger = useScrollTrigger();
-  const { user } = useAuth0();
+  const { user, logout } = useAuth0();
+  const { currentUser } = useRealm();
+
+  const signoff = async () => {
+    await currentUser.logOut();
+    logout();
+  };
 
   return (
     <AppBar
@@ -33,7 +40,7 @@ export default function TopAppBar() {
         </Box>
         <div>
           <ToggleStoreButton />
-          <IconButton edge="end">
+          <IconButton onClick={signoff} edge="end">
             <Avatar src={user?.picture} sx={{ width: 32, height: 32 }} />
           </IconButton>
         </div>

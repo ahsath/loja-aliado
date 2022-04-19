@@ -15,6 +15,10 @@ export default function useRealm() {
       currentUser: user,
       db: user.mongoClient(import.meta.env.VITE_SERVICE_NAME).db,
     });
+    return {
+      currentUser: user,
+      db: user.mongoClient(import.meta.env.VITE_SERVICE_NAME).db,
+    };
   };
 
   return { ...state, loginWithCustomJwt };

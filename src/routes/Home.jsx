@@ -6,7 +6,7 @@ import useRealm from '../hooks/useRealm';
 
 export default function Home() {
   const { user, loginWithRedirect, isLoading, getIdTokenClaims } = useAuth0();
-  const { db, loginWithCustomJwt } = useRealm();
+  const { loginWithCustomJwt } = useRealm();
   const [busy, setBusy] = useState(false);
   const navigate = useNavigate();
 
@@ -15,7 +15,7 @@ export default function Home() {
       setBusy(true);
       getIdTokenClaims()
         .then(async (token) => {
-          await loginWithCustomJwt(token.__raw);
+          const { db } = await loginWithCustomJwt(token.__raw);
           const stores = db('loja').collection('stores');
           const store = await stores.findOne();
           if (!store) {

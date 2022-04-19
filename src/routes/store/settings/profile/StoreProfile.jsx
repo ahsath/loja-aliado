@@ -1,42 +1,59 @@
-import { Badge, Avatar, Box, TextField, Button, Toolbar } from '@mui/material';
+import {
+  Badge,
+  Avatar,
+  Box,
+  TextField,
+  Button,
+  Toolbar,
+  Autocomplete,
+  useTheme,
+} from '@mui/material';
 import { UploadFileButton, Page } from '../../../../components';
 import ArrowBackRounded from '@mui/icons-material/ArrowBackRounded';
 import SaveRounded from '@mui/icons-material/SaveRounded';
 import { useForm } from 'react-hook-form';
 import { useEffect } from 'react';
 import useMapbox from '../../../../components/mapbox/useMapbox';
+import useStore from './useStore';
 
 export default function StoreSettingsProfile() {
+  const { palette } = useTheme();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
   const mapbox = useMapbox();
+  const { data, error, loading } = useStore();
 
   useEffect(() => {
-    const map = mapbox.map('map');
-    const geolocateControl = mapbox.geolocateControl();
-    map.addControl(geolocateControl);
-    // const marker = mapbox.marker()
+    let map;
+    if (data) {
+      map = mapbox.map({
+        container: 'map',
+        center: data.coords,
+      });
+      const geolocateControl = mapbox.geolocateControl();
+      const marker = mapbox
+        .marker({ color: palette.primary.main })
+        .setLngLat(data.coords);
 
-    map.on('move', ({ target }) => {
-      const { lng, lat } = target.getCenter();
-      console.log(lng, lat);
-    });
+      map.addControl(geolocateControl);
 
-    map.on('load', () => {
-      geolocateControl.trigger();
-    });
+      map.on('move', ({ target }) => {
+        const { lng, lat } = target.getCenter();
+        marker.setLngLat([lng, lat]);
+      });
 
-    geolocateControl.on('error', (data) => {
-      console.log(data);
-    });
+      map.on('load', () => marker.addTo(map));
+    }
 
-    return () => map.remove();
-  }, []);
+    return () => map?.remove();
+  }, [data]);
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+  };
 
   return (
     <Page
@@ -113,7 +130,11 @@ export default function StoreSettingsProfile() {
             margin="normal"
           />
         </form>
-        <div id="map" className="grow" />
+        {loading && <div>Loading map...</div>}
+        {data && <div id="map" className="grow" />}
+        {error && (
+          <div>An error has ocurred while loading the map, please refresh</div>
+        )}
       </div>
     </Page>
   );

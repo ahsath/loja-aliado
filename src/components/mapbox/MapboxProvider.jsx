@@ -12,7 +12,7 @@ export default function MapboxProvider({ accessToken, children }) {
         container,
         style: 'mapbox://styles/mapbox/streets-v11',
         center,
-        zoom: 15,
+        zoom: 10,
       });
     },
     marker(options) {

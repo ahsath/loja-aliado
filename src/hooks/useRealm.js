@@ -11,14 +11,13 @@ export default function useRealm() {
 
   const loginWithCustomJwt = async (jwt) => {
     const user = await app.logIn(Realm.Credentials.jwt(jwt));
+    const db = user.mongoClient(import.meta.env.VITE_SERVICE_NAME).db;
     setState({
       currentUser: user,
-      db: user.mongoClient(import.meta.env.VITE_SERVICE_NAME).db,
+      db,
     });
-    return {
-      currentUser: user,
-      db: user.mongoClient(import.meta.env.VITE_SERVICE_NAME).db,
-    };
+
+    return { currentUser: user, db };
   };
 
   return { ...state, loginWithCustomJwt };

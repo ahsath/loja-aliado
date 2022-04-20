@@ -15,9 +15,9 @@ export default function Home() {
       setBusy(true);
       getIdTokenClaims()
         .then(async (token) => {
-          const { db } = await loginWithCustomJwt(token.__raw);
+          const { db, currentUser } = await loginWithCustomJwt(token.__raw);
           const stores = db('loja').collection('stores');
-          const store = await stores.findOne();
+          const store = await stores.findOne({ userId: currentUser.id });
           if (!store) {
             navigate('/store/settings/profile', { replace: true });
           } else {

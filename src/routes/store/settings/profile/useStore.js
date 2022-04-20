@@ -19,7 +19,7 @@ export default function useStore() {
         if (!store) {
           const res = await fetch(
             `https://api.ipgeolocation.io/ipgeo?fields=latitude,longitude&apiKey=${
-              import.meta.env.VITE_API_KEY
+              import.meta.env.VITE_IP_GEO_API_KEY
             }`
           );
           const coords = await res.json();

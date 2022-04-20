@@ -10,7 +10,6 @@ export default function useStore() {
   });
 
   useEffect(() => {
-    console.log('re-rendering?');
     async function main() {
       const stores = db('loja').collection('stores');
 
@@ -18,11 +17,13 @@ export default function useStore() {
         let store = await stores.findOne({ userId: currentUser.id });
 
         if (!store) {
-          const res = await fetch('http://ip-api.com/json?fields=lat,lon');
+          const res = await fetch(
+            `https://api.ipgeolocation.io/ipgeo?fields=latitude,longitude&apiKey=${
+              import.meta.env.VITE_API_KEY
+            }`
+          );
           const coords = await res.json();
-          // In case res.ok is not okay set lnt=0|lat=0
-          // we cannot break the app if ip-api.com is not available
-          store = { coords: [coords?.lon || 0, coords?.lat || 0] };
+          store = { coords: [coords?.longitude || 0, coords?.latitude || 0] };
         }
 
         setStore({ ...store, data: store, loading: false });
